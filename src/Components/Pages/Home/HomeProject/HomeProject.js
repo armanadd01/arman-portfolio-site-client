@@ -1,28 +1,25 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Zoom from 'react-reveal/Zoom';
 
-const HomeProject = ({ mobile }) => {
-    // const { Price, name, img } = mobile;
+const HomeProject = ({ portfolio }) => {
+    const { name, live, img } = portfolio;
     return (
         <Col md={4} className="my-4">
-            <Card style={{ width: '100%' }}>
-                <Card.Img style={{ height: '13rem' }} variant="top" src={mobile?.img} />
-                <Card.Body>
-                    <Card.Title className="text-danger"> <h2 className="fw-bold">{mobile?.name}</h2></Card.Title>
-                    <Card.Text className="fs-5">
-                        <h6 className="text-primary fs-5 fw-bold">price: <span className="text-danger fs-6">BDT {mobile?.Price}</span></h6>
-                        <hr />
-                    </Card.Text>
-                    <Card.Text>
+            <div class="gallery">
+                <Zoom bottom cascade duration={1000}>
+                    <div className="view overlay hm-black-light gallery-item">
+                        <img src={img} alt="Placeholder Image" class="img-fluid" />
+                        <div className="mask flex-center">
+                            <Zoom bottom cascade duration={3000}>
+                                <p className="white-text">{name}</p>
+                            </Zoom>
+                        </div>
+                    </div>
+                </Zoom>
+            </div>
 
-                    </Card.Text>
-
-                    <Button variant="outline-danger" size="sm">Add Order </Button>
-
-                </Card.Body>
-            </Card>
-        </Col>
+        </Col >
     );
 };
 

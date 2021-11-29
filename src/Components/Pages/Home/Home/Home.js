@@ -9,20 +9,10 @@ import HomeProjects from '../HomeProjects/HomeProjects';
 const Home = () => {
     return (
         <div className="page-outer">
-            <Container fluid >
-                <Row >
-                    <Col md={1}>
-                        <Sidebar></Sidebar>
-                    </Col>
-                    <Col md={11} >
-                        <Banner></Banner>
-                        <HomeProjects></HomeProjects>
-                        <HomeProject></HomeProject>
-                        <HomeContact></HomeContact>
-                    </Col>
-                </Row>
-            </Container>
+            <Banner></Banner>
+            {/* <HomeProjects></HomeProjects> */}
 
+            <HomeContact></HomeContact>
         </div>
     );
 };
