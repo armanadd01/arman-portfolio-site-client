@@ -196,7 +196,12 @@ const HomeContact = () => {
                                         </div>
                                     </div>
                                     <div class="col-md-5 d-flex align-items-stretch">
-                                        <div class="info-wrap w-100 p-5 img" style={{ backgroundImage: "url(images/img.jpg)", }}>
+                                        <div class="info-wrap w-100 p-5 img" style={{
+
+                                            backgroundImage: "url(https://i.ibb.co/cYpQ4hP/linkedin-sales-solutions-0-Qv-Typ0g-H3-A-unsplash-1.jpg)",
+                                            backgroundPosition: "center",
+                                            backgroundSize: "cover"
+                                        }}>
                                         </div>
                                     </div>
                                 </div>

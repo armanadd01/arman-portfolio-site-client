@@ -1,7 +1,11 @@
 import React from 'react';
 // import { Fade, Slide } from 'react-reveal';
+import Typical from "react-typical";
 import Slide from 'react-reveal/Slide';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import "./Banner.css";
+
 
 
 const Banner = () => {
@@ -14,52 +18,81 @@ const Banner = () => {
         e.target.style.color = "white"
     }
     return (
-        <div className=" " style={{ backgroundColor: '#009DAE' }}>
-            <Container className=" px-5 ">
-                <Row>
-                    <Col md={8} className="py-5 px-5 ">
+        <div className="" style={{ backgroundColor: '#009DAE' }}>
+            <Container fluid className=" section">
 
 
+                <section id="home" className="home">
 
-                        <h1 className="heading-1 ">
-                            <Slide cascade left>
-                                <span
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
-                                >H</span>
-                                <span
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
-                                >I</span>
-                                <span
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
-                                >,</span>
-                            </Slide>
+                    <div className="intro_sec d-block d-lg-flex align-items-center ">
+                        <div
+                            className="h_bg-image order-1 order-lg-2 h-100 "
+                            style={{
+                                backgroundImage: `url(https://i.ibb.co/n6MHr8k/IMG-20200109-113953-042-1-1.jpg)`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundSize: "auto",
+                            }}
+                        ></div>
+                        <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
+                            <div className="align-self-center ">
+                                <div className="intro mx-auto">
+                                    <h1 className="heading-1 ">
+                                        <Slide cascade left>
+                                            <span
+                                                onMouseEnter={handleMouseEnter}
+                                                onMouseLeave={handleMouseLeave}
+                                            >H</span>
+                                            <span
+                                                onMouseEnter={handleMouseEnter}
+                                                onMouseLeave={handleMouseLeave}
+                                            >I</span>
+                                            <span
+                                                onMouseEnter={handleMouseEnter}
+                                                onMouseLeave={handleMouseLeave}
+                                            >,</span>
+                                        </Slide>
 
-                        </h1>
-                        <h2 className="py-1 heading-2">
-                            <Slide cascade left triggerOnce>
-                                I'm Arman Habib Nahid
+                                    </h1>
+                                    <h2 className="mb-1x heading-2">Arman Habib Nahid</h2>
+                                    <h1 className="fluidz-48 mb-1x">
+                                        <Typical
+                                            steps={[
+                                                "I love coding",
+                                                1000,
+                                                "I code cool websites",
+                                                1000,
+                                                "I develop mobile apps",
+                                                1000,
+                                            ]}
+                                            loop={Infinity}
+                                            wrapper="p"
 
-                            </Slide>
-                        </h2>
-                        <h2 className="py-2 heading-3">
-                            <Slide cascade left triggerOnce>
-                                Web developer
-                            </Slide>
-                        </h2>
-
-                        <Button variant="outline-danger">Danger</Button>
-
-                    </Col>
-                    <Col md={2}>
-                        <Slide cascade right triggerOnce>
-                            <img className="h-75 animate__backInRight" src="https://i.ibb.co/qsvPy02/IMG-20200816-151706-02-removebg-preview.png" alt="" />
-                        </Slide>
-
-                    </Col>
-                </Row>
+                                        />
+                                    </h1>
+                                    <p className="mb-1x">I Love Coding</p>
+                                    <div className="intro_btn-action pb-5">
+                                        <Link to="/portfolio" className="text_2">
+                                            <div id="button_p" className="ac_btn btn ">
+                                                My Portfolio
+                                                <div className="ring one"></div>
+                                                <div className="ring two"></div>
+                                                <div className="ring three"></div>
+                                            </div>
+                                        </Link>
+                                        <Link to="/contact">
+                                            <div id="button_h" className="ac_btn btn">
+                                                Contact Me
+                                                <div className="ring one"></div>
+                                                <div className="ring two"></div>
+                                                <div className="ring three"></div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </Container>
         </div >
